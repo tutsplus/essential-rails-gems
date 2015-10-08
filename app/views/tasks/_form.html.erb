@@ -1,8 +1,7 @@
-<%= form_for(@task) do |f| %>
+<%= form_for([@project, @task]) do |f| %>
   <% if @task.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:</h2>
-
       <ul>
       <% @task.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -11,19 +10,17 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <p>
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :done %><br>
+    <%= f.text_field :title, class: "form-control" %>
+  </p>
+
+  <p>
     <%= f.check_box :done %>
-  </div>
-  <div class="field">
-    <%= f.label :project_id %><br>
-    <%= f.collection_select :project_id, Project.all, :id, :name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <%= f.label :done %>
+  </p>
+
+  <p>
+    <%= f.submit class: "btn btn-primary" %>
+  </p>
 <% end %>
