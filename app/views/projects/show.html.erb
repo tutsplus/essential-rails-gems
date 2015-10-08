@@ -15,7 +15,7 @@
   <% @project.tasks.each do |task| %>
   <li>
     <%= check_box_tag "task_done_#{task.id}", "", task.done, class: "task_done", data: { id: task.id, toggle_path: toggle_project_task_path(@project, task) } %>
-    <%= task.title %>
+    <%= link_to task.title, [@project, task] %>
   </li>
   <% end %>
 </ul>

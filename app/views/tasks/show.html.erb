@@ -8,8 +8,8 @@
   <%= link_to @task.project.name, @task.project %>
 </p>
 
-<%= link_to 'Edit', edit_task_path(@task) %> |
-<%= link_to 'Back', tasks_path %>
+<%= link_to 'Edit', edit_project_task_path(@task.project, @task) %> |
+<%= link_to 'Back', @task.project %>
 
 <h2>Comments</h2>
 
@@ -22,20 +22,20 @@
   <% end %>
 </ol>
 
-<%= form_for([ @task, @task.comments.build ]) do |f| %>
+<%= form_for([ @task.project, @task, @task.comments.build ]) do |f| %>
 <p>
-  <%= f.text_field :name, placeholder: "Name" %>
+  <%= f.text_field :name, placeholder: "Name", class: "form-control" %>
 </p>
 
 <p>
-  <%= f.email_field :email, placeholder: "Email" %>
+  <%= f.email_field :email, placeholder: "Email", class: "form-control" %>
 </p>
 
 <p>
-  <%= f.text_area :body, rows: 8, cols: 50 %>
+  <%= f.text_area :body, rows: 8, cols: 50, class: "form-control" %>
 </p>
 
 <p>
-  <%= f.submit %>
+  <%= f.submit class: "btn btn-primary" %>
 </p>
 <% end %>
