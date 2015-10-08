@@ -7,11 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="container">
-    <div id="container-projects">
+  <div class="container">
+
+    <%= render "flash" %>
+
+    <div class="col-md-9">
       <%= yield %>
     </div>
-    <div id="sidebar">
+
+    <div class="col-md-3">
       <h2>Sidebar</h2>
 
       <%= yield(:sidebar) %>
