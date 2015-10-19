@@ -24,6 +24,7 @@ end
 
 group :development do
   gem 'better_errors'
+  gem 'bullet'
 end
 
 # Use ActiveModel has_secure_password

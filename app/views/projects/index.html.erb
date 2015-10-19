@@ -12,7 +12,16 @@
   <tbody>
     <% @projects.each do |project| %>
       <tr>
-        <td><%= link_to project.name, project %></td>
+        <td>
+          <p>
+            <%= link_to project.name, project %>
+          </p>
+          <ul>
+            <%- project.tasks.each do |task| %>
+            <li><%= task.title %></li>
+            <% end %>
+          </ul>
+        </td>
         <td><%= l project.ends_at, format: :long %></td>
         <td>
           <%= link_to 'Edit', edit_project_path(project) %>
