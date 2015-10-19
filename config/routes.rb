@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   scope "/:locale" do
     resources :projects do
       resources :tasks do
