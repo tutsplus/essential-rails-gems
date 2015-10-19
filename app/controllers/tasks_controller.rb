@@ -66,7 +66,7 @@ class TasksController < ApplicationController
 
   def toggle
     @task.toggle(:done).save
-    DefaultMailer.confirm_task(@task).deliver_later
+    DefaultMailer.confirm_task(@task).deliver_later if @task.comments.any?
     head 204 # No Content
   end
 
