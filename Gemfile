@@ -18,6 +18,7 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'bootstrap-sass'
 gem 'devise'
+gem 'pundit'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0'
