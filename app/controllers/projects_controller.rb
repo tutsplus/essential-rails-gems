@@ -6,7 +6,11 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.page(params[:page] || 1).per(params[:per_page] || 5).all
+    @projects = if params[:q]
+      Project.search { keywords params[:q] }.results
+    else
+      Project.page(params[:page] || 1).per(params[:per_page] || 5).all
+    end
   end
 
   # GET /projects/1

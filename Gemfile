@@ -23,6 +23,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
+gem 'sunspot_rails'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0'
@@ -35,6 +36,8 @@ end
 
 group :development, :test do
   gem 'letter_opener'
+  gem 'sunspot_solr'
+  gem 'progress_bar'
 end
 
 # Use ActiveModel has_secure_password

@@ -1,5 +1,12 @@
 <h1>Projects</h1>
 
+<%= form_tag projects_path, method: :get do %>
+<p>
+  <%= text_field_tag :q, "", placeholder: "Search projects" %>
+  <%= button_tag "Search" %>
+</p>
+<% end %>
+
 <table class="table table-hover">
   <thead>
     <tr>
