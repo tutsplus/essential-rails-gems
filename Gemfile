@@ -24,6 +24,7 @@ gem 'mini_magick'
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
 gem 'sunspot_rails'
+gem 'paranoia'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0'

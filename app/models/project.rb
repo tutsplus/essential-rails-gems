@@ -4,6 +4,8 @@ class Project < ActiveRecord::Base
 
   validates :name, presence: true
 
+  acts_as_paranoid
+
   searchable do
     text :name, :description
   end
