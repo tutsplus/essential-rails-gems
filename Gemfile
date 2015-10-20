@@ -25,6 +25,7 @@ gem 'kaminari'
 gem 'bootstrap-kaminari-views'
 gem 'sunspot_rails'
 gem 'paranoia'
+gem 'activeadmin', '~> 1.0.0.pre2'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0'
