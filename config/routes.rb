@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'test_email/send_email'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users
