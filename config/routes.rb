@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   scope "/:locale" do
     resources :projects do
+      resources :assets, only: [:create]
       resources :tasks do
         resources :comments, only: [:create]
         member do

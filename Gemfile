@@ -19,6 +19,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'pundit'
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0'

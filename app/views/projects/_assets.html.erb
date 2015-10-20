@@ -1,0 +1,19 @@
+<h3>Assets for the project</h3>
+
+<ul>
+  <%- @project.assets.each do |asset| %>
+    <li>
+      <%= link_to asset.file_url do %>
+        <%= image_tag asset.file_url(:thumb), width: 120 if asset.file_url =~ /(gif|jpg|jpeg|png|bmp)$/ %>
+        <%= asset.file_identifier %>
+      <%- end %>
+    </li>
+  <% end %>
+</ul>
+
+<%= form_for [ @project, @project.assets.build ], multipart: true do |f| %>
+<p>
+  <%= f.file_field :file %>
+  <%= f.submit %>
+</p>
+<% end %>
