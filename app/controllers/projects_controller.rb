@@ -6,7 +6,7 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.includes(:tasks).all
+    @projects = Project.page(params[:page] || 1).per(params[:per_page] || 5).all
   end
 
   # GET /projects/1

@@ -13,14 +13,7 @@
     <% @projects.each do |project| %>
       <tr>
         <td>
-          <p>
-            <%= link_to project.name, project %>
-          </p>
-          <ul>
-            <%- project.tasks.each do |task| %>
-            <li><%= task.title %></li>
-            <% end %>
-          </ul>
+          <%= link_to project.name, project %>
         </td>
         <td><%= l project.ends_at, format: :long %></td>
         <td>
@@ -34,6 +27,8 @@
     <% end %>
   </tbody>
 </table>
+
+<%= paginate @projects, theme: "twitter-bootstrap-3" %>
 
 <p>
   <%= link_to 'New Project', new_project_path, class: "btn btn-primary" %>

@@ -21,6 +21,8 @@ gem 'devise'
 gem 'pundit'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'kaminari'
+gem 'bootstrap-kaminari-views'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0'
