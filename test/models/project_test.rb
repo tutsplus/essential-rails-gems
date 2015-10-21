@@ -1,9 +1,9 @@
 require 'test_helper'
 
-class ProjectTest < MiniTest::Test
-  def test_creates_a_project
+class ProjectTest < ActiveSupport::TestCase
+  it "creates a project" do
     Project.create! name: "My First Project"
-    assert_equal 1, Project.count
+    Project.count.must_equal 1
   end
 
   def test_spawns_one_project

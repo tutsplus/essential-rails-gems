@@ -169,6 +169,9 @@ GEM
     mini_magick (4.3.6)
     mini_portile (0.6.2)
     minitest (5.8.1)
+    minitest-rails (2.2.0)
+      minitest (~> 5.7)
+      railties (~> 4.1)
     multi_json (1.11.2)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
@@ -322,6 +325,7 @@ DEPENDENCIES
   kaminari
   letter_opener
   mini_magick
+  minitest-rails
   paranoia
   pg
   progress_bar
