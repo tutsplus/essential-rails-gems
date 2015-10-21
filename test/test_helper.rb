@@ -4,7 +4,19 @@ require 'rails/test_help'
 
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
-  fixtures :all
+  #fixtures :all
 
   # Add more helper methods to be used by all tests here...
+end
+
+DatabaseCleaner.strategy = :transaction
+
+class MiniTest::Test
+  def setup
+    DatabaseCleaner.start
+  end
+
+  def teardown
+    DatabaseCleaner.clean
+  end
 end

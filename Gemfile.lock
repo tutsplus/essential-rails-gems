@@ -108,6 +108,7 @@ GEM
       execjs
     coffee-script-source (1.9.1.1)
     connection_pool (2.2.0)
+    database_cleaner (1.5.1)
     debug_inspector (0.0.2)
     devise (3.5.2)
       bcrypt (~> 3.0)
@@ -292,6 +293,7 @@ DEPENDENCIES
   byebug
   carrierwave
   coffee-rails
+  database_cleaner
   devise
   hirb
   jbuilder (~> 2.0)

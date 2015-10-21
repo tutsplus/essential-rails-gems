@@ -29,6 +29,10 @@ gem 'activeadmin', '~> 1.0.0.pre2'
 gem 'sidekiq'
 gem 'hirb'
 
+group :test do
+  gem 'database_cleaner'
+end
+
 group :doc do
   gem 'sdoc', '~> 0.4.0'
 end
