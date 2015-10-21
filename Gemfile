@@ -28,6 +28,8 @@ gem 'paranoia'
 gem 'activeadmin', '~> 1.0.0.pre2'
 gem 'sidekiq'
 gem 'hirb'
+gem 'pry-rails'
+gem 'pry-byebug'
 
 group :test do
   gem 'database_cleaner'
