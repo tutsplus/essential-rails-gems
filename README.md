@@ -1,20 +1,23 @@
-# [Get Started With Ruby on Rails][published url]
+# [Essential Rails Gems][published url]
 ## Instructor: [José Mota][instructor url]
 
 
-Ruby on Rails is an open-source framework that allows you to quickly and easily build applications for the web. It's a framework designed with developer productivity and happiness in mind. With Rails you can create web applications with very little effort through strong conventions, sensible defaults and a great set of libraries. If you want to get started building web applications, Ruby on Rails is a great place to start!
+Ruby on Rails is a great framework for quickly and easily build applications for the web. It's a framework designed with developer productivity and happiness in mind. However there are lots of commonly-required features that Rails doesn't support out of the box. You can always roll your own solutions, but the best case is to use a community-created gem.
 
-In this course, you'll learn about developing web applications with Ruby on Rails. We will build a simple task and project management tool together. In so doing, we'll cover the foundations of Rails: models, controllers and views. We'll also go further, touching on most of the key features of the Rails framework: validations, migrations, the asset pipeline, email delivery, internationalization, AJAX integration and more!
+In this course, Tuts+ instructor José Mota will show you how to use some of the most commonly-needed gems for Rails apps. You'll learn about gems that improve the debugging experience, that help with user authorization and authentication, that run tasks, perform search, protect data and more! You'll also learn about some really crucial testing gems along the way.
+
+So let's get started!
 
 ## Source Files Description
 
-This repository contains the complete code for a simple task and project management tool. The source files contain the same code that is input in each lesson. Each commit to the repository matches a lesson, so if you want to see a snapshot of the code at any particular point in the course, simply check out the corresponding commit.
+
+The source files contain the code that's been developed in a previous course, with the addition of the necessary code that showcases each Ruby gem included in this course.
 
 ------
 
-These are source files for the Tuts+ course: [Get Started With Ruby on Rails][published url]
+These are source files for the Tuts+ course: [Essential Rails Gems][published url]
 
 Available on [Tuts+](https://tutsplus.com). Teaching skills to millions worldwide.
 
-[published url]: https://code.tutsplus.com/courses/get-started-with-ruby-on-rails
+[published url]: https://code.tutsplus.com/courses/essential-rails-gems
 [instructor url]: https://tutsplus.com/authors/jose-mota
