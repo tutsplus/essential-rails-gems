@@ -1,0 +1,6 @@
+%p
+  You participated on the following task:
+  = succeed "." do
+    %strong= @task.title
+%p
+  It is now marked as #{@task.done? ? "done" : "undone"}.

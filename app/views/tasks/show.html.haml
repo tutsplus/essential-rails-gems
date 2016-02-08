@@ -1,0 +1,26 @@
+%h1
+  = check_box_tag :task_done, "", @task.done
+  = @task.title
+%p
+  %strong Project:
+  = link_to @task.project.name, @task.project
+= link_to 'Edit', edit_project_task_path(@task.project, @task)
+|
+= link_to 'Back', @task.project
+%h2 Comments
+%ol
+  - @task.comments.each do |comment|
+    %li
+      %h3
+        = comment.name
+        %small= comment.email
+      %blockquote= comment.body
+= form_for([ @task.project, @task, @task.comments.build ]) do |f|
+  %p
+    = f.text_field :name, placeholder: "Name", class: "form-control"
+  %p
+    = f.email_field :email, placeholder: "Email", class: "form-control"
+  %p
+    = f.text_area :body, rows: 8, cols: 50, class: "form-control"
+  %p
+    = f.submit class: "btn btn-primary"

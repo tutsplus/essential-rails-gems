@@ -1,0 +1,18 @@
+= form_for([@project, @task]) do |f|
+  - if @task.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@task.errors.count, "error")
+        prohibited this task from being saved:
+      %ul
+        - @task.errors.full_messages.each do |message|
+          %li= message
+  %p
+    = f.label :title
+    %br/
+    = f.text_field :title, class: "form-control"
+  %p
+    = f.check_box :done
+    = f.label :done
+  %p
+    = f.submit class: "btn btn-primary"

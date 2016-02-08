@@ -1,0 +1,19 @@
+%h1 Listing Tasks
+%table
+  %thead
+    %tr
+      %th Title
+      %th Done
+      %th Project
+      %th{:colspan => "3"}
+  %tbody
+    - @tasks.each do |task|
+      %tr
+        %td= task.title
+        %td= task.done
+        %td= task.project
+        %td= link_to 'Show', task
+        %td= link_to 'Edit', edit_task_path(task)
+        %td= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Task', new_task_path

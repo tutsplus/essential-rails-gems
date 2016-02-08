@@ -1,0 +1,30 @@
+%h1 Projects
+= form_tag projects_path, method: :get do
+  %p
+    = text_field_tag :q, "", placeholder: "Search projects"
+    = button_tag "Search"
+%table.table.table-hover
+  %thead
+    %tr
+      %th Name
+      %th Ends at
+      %th
+  %tbody
+    - @projects.each do |project|
+      %tr
+        %td
+          = link_to project.name, project
+        %td= l project.ends_at, format: :long
+        %td
+          - if policy(:project).edit?
+            = link_to 'Edit', edit_project_path(project)
+            •
+            \#{link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }}
+= paginate @projects, theme: "twitter-bootstrap-3"
+%p
+  = link_to 'New Project', new_project_path, class: "btn btn-primary"
+- content_for(:sidebar) do
+  %h3 All projects
+  %ol.list-group
+    - Project.all.each do |project|
+      %li.list-group-item= link_to project.name, project

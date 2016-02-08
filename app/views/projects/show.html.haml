@@ -1,0 +1,18 @@
+%h1
+  = @project.name
+%blockquote= @project.description
+%p
+  %strong Ends at:
+  = @project.ends_at
+%h2 Tasks for this project
+%ul
+  - @project.tasks.each do |task|
+    %li
+      = check_box_tag "task_done_#{task.id}", "", task.done, class: "task_done", data: { id: task.id, toggle_path: toggle_project_task_path(@project, task) }
+      = link_to task.title, [@project, task]
+%p
+  = link_to "New task", new_project_task_path(@project), class: "btn btn-primary"
+= render "assets"
+= link_to 'Edit', edit_project_path(@project)
+|
+= link_to 'Back', projects_path

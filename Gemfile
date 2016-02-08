@@ -23,6 +23,8 @@ gem 'sidekiq'
 gem 'hirb'
 gem 'pry-rails'
 gem 'pry-byebug'
+gem 'quiet_assets'
+gem 'hamlit'
 
 group :test do
   gem 'database_cleaner'
@@ -38,15 +40,13 @@ end
 group :development do
   gem 'better_errors'
   gem 'bullet'
+  gem 'erb2haml'
 end
 
 group :development, :test do
   gem 'letter_opener'
   gem 'sunspot_solr'
   gem 'progress_bar'
-end
-
-group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
