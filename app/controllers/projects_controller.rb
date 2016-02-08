@@ -9,7 +9,7 @@ class ProjectsController < ApplicationController
     @projects = if params[:q]
       Project.search { keywords params[:q] }.results
     else
-      Project.page(params[:page] || 1).per(params[:per_page] || 5).all
+      Project.page(params[:page] || 1).per(params[:per_page] || 15).all
     end
   end
 

@@ -20,11 +20,14 @@
             = link_to 'Edit', edit_project_path(project)
             •
             \#{link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }}
+
 = paginate @projects, theme: "twitter-bootstrap-3"
+
 %p
   = link_to 'New Project', new_project_path, class: "btn btn-primary"
+
 - content_for(:sidebar) do
-  %h3 All projects
+  %h3 Latest projects
   %ol.list-group
-    - Project.all.each do |project|
+    - Project.order(created_at: :desc).limit(5).all.each do |project|
       %li.list-group-item= link_to project.name, project
