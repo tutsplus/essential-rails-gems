@@ -7,11 +7,9 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
+    =render "nav"
     .container
-      - if current_user
-        %p
-          = link_to "Log out", destroy_user_session_path, method: :delete
-      = render "flash"
+      =render "flash"
       .col-md-9
         = yield
       .col-md-3
