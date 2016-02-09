@@ -25,6 +25,7 @@ gem 'pry-rails'
 gem 'pry-byebug'
 gem 'quiet_assets'
 gem 'hamlit'
+gem 'omniauth-github'
 
 group :test do
   gem 'database_cleaner'

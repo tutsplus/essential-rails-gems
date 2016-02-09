@@ -1,12 +1,11 @@
 class ApplicationController < ActionController::Base
   include Pundit
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
   before_action :set_locale
   before_action :authenticate_user!
 
+  layout :layout_by_resource
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
   def set_locale
@@ -21,5 +20,15 @@ class ApplicationController < ActionController::Base
 
   def user_not_authorized
     redirect_to root_path, alert: "You are not allowed to do that."
+  end
+
+  protected
+
+  def layout_by_resource
+    if devise_controller?
+      "login"
+    else
+      "application"
+    end
   end
 end

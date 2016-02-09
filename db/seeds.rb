@@ -47,5 +47,3 @@
     Task.create! project: project, title: task
   end
 end
-
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')

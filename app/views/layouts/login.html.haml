@@ -6,8 +6,8 @@
     =stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     =javascript_include_tag 'application', 'data-turbolinks-track' => true
     =csrf_meta_tags
-  %body
-    =render "nav"
+  %body.page-login
     .container
-      =render "flash"
-      =yield
+      .col-md-offset-4.col-md-4
+        =render "flash"
+        =yield

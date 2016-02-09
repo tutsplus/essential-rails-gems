@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'test_email/send_email'
 
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   scope "/:locale" do
     resources :projects do
