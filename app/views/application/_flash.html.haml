@@ -1,2 +1,8 @@
-= content_tag :div, notice, class: "flash bg-success" if notice
-= content_tag :div, alert, class: "flash bg-danger" if alert
+-if notice
+  =content_tag :div, class: "flash bg-success text-success" do
+    %i.fa.fa-check
+    =notice
+-if alert
+  =content_tag :div, class: "flash bg-danger text-danger" do
+    =icon "close"
+    =alert

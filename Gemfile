@@ -26,6 +26,7 @@ gem 'pry-byebug'
 gem 'quiet_assets'
 gem 'hamlit'
 gem 'omniauth-github'
+gem 'font-awesome-sass'
 
 group :test do
   gem 'database_cleaner'
