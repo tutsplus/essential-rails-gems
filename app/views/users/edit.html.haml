@@ -1,0 +1,20 @@
+%h1 Edit your data
+
+=form_for @user, url: user_path do |f|
+  %ul
+    - @user.errors.full_messages.each do |message|
+      %li=message
+  %p
+    =f.label :email
+    =f.email_field :email, class: "form-control"
+
+  .row
+    %p.col-md-6
+      =f.label :password
+      =f.password_field :password, class: "form-control"
+    %p.col-md-6
+      =f.label :password_confirmation
+      =f.password_field :password_confirmation, class: "form-control"
+
+  %p.text-center
+    =f.button "Update data", class: "btn btn-primary"

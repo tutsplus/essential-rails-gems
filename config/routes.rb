@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   scope "/:locale" do
+    resource :user, only: %w(edit update)
     resources :projects do
       resources :assets, only: [:create]
       resources :tasks do
